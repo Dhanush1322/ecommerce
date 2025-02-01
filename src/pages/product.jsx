@@ -1,5 +1,5 @@
 import React from 'react'
-import Header from '../components/Header/'; // Importing the Header component
+import Header from "../components/Header.jsx";
 import AllProducts from './all_products';
 function product() {
   return (

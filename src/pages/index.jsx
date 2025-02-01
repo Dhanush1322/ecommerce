@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
-import Header from '../components/Header/'; // Importing the Header component
+import Header from "../components/Header.jsx";
+ // Importing the Header component
 import Banner from '../components/Banner/';
 import "../css/index.css";
 
