@@ -1,0 +1,272 @@
+/* Reset default styles */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* Top Header */
+.top-header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 20px;
+    background-color: #D4AF37;
+    color: white;
+    font-size: 14px;
+}
+
+.top-header .left-side {
+    display: flex;
+    align-items: center;
+}
+
+.top-header .right-side {
+    display: flex;
+    align-items: center;
+}
+
+.top-header .social-icon {
+    margin-left: 10px;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.top-header .social-icon:hover {
+    color: #eb8b18; /* Hover effect color */
+}
+
+/* Navigation Bar */
+.nav1 {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #1A1A2E;
+    height: 70px;
+    position: relative;
+}
+
+/* Logo */
+.logo img {
+    width: 120px;
+    height: auto;
+}
+
+/* Search Section */
+.search {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    background: white;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+.search input {
+    border: none;
+    outline: none;
+    padding: 5px;
+    width: 150px;
+}
+
+.search button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #333;
+    font-size: 18px;
+}
+
+/* Menu */
+.menu {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+}
+
+.menu li {
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: 600;
+    color: #eb8b18;
+    transition: color 0.3s ease-in-out;
+}
+
+.menu li:hover {
+    color: #eb8b18;
+}
+
+/* Category Submenu */
+.category-menu {
+    position: relative;
+}
+
+.submenu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: white;
+    list-style: none;
+    padding: 10px;
+    display: block;
+    border-radius: 5px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+.submenu li {
+    padding: 5px 10px;
+    cursor: pointer;
+    color: black;
+}
+
+.submenu li:hover {
+    background: #eb8b18;
+    color: white;
+}
+
+/* Hamburger Menu */
+.hamburger {
+    display: none;
+    font-size: 24px;
+    color: #eb8b18;
+    cursor: pointer;
+}
+
+/* Add styles for the new user icons */
+.user-icons {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+.user-icon {
+    font-size: 24px;
+    cursor: pointer;
+    color: #fff;
+}
+
+.user-icon:hover {
+    color: #FFD700; /* Gold color for hover effect */
+}
+/* Ensure that the link is styled normally and doesn't change on click or focus */
+.menu li a {
+  text-decoration: none;
+  color: inherit; /* This will keep the original color */
+}
+
+/* Disable any focus or active state styling */
+.menu li a:focus,
+.menu li a:active {
+  outline: none; /* Removes the focus outline */
+  color: inherit; /* Keeps the color the same */
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+    .top-header {
+        display: none; /* Hide top header on mobile */
+    }
+
+    .nav1 {
+        padding: 10px;
+    }
+
+    /* Align logo to left, search bar in center, and menu icon on right */
+    .nav1 {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .search {
+        flex-grow: 1;
+        margin: 0 10px;
+    }
+
+    .search input {
+        width: 100%;
+    }
+
+    /* Menu hidden initially */
+    .menu {
+        flex-direction: column;
+        position: fixed;
+        top: 0;
+        right: -250px;
+        width: 250px;
+        height: 100vh;
+        background: white;
+        padding: 20px;
+        transition: right 0.3s ease-in-out;
+        box-shadow: -2px 0 10px rgba(0, 0, 0, 0.2);
+        z-index: 1000;
+    }
+
+    /* Menu visible when open */
+    .menu.open {
+        right: 0;
+        z-index: 1000;
+    }
+
+    .menu li {
+        padding: 15px 0;
+        font-size: 18px;
+        color: #eb8b18;
+    }
+
+    /* Show Hamburger */
+    .hamburger {
+        display: block;
+    }
+
+    /* Close Sidebar Button */
+    .close-sidebar {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        cursor: pointer;
+        font-size: 24px;
+        color: #eb8b18; /* Customize the color of the close icon */
+    }
+
+    /* Show user icons when menu is open in mobile */
+    .menu.open .user-icons {
+        display: flex;
+        
+        gap: 15px;
+        
+       
+    }
+
+    /* Hide user icons by default in mobile view */
+    .user-icons {
+        display: none;
+    }
+}
+
+/* Desktop View */
+@media (min-width: 769px) {
+    .hamburger {
+        display: none;
+    }
+
+    .menu {
+        display: flex;
+        list-style: none;
+        gap: 20px;
+        align-items: center;
+        z-index: 1000;
+    }
+
+    /* Show icons in desktop view */
+    .user-icons {
+        display: flex;
+        gap: 15px;
+        align-items: center;
+        justify-content: flex-end;
+    }
+}

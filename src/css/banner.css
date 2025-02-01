@@ -1,0 +1,69 @@
+/* Banner Section */
+.banner-container {
+    width: 100%;
+    height: 400px; /* Adjust the height as needed */
+    background-image: url('../assets/banner.jpg'); /* Replace with your actual image URL */
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    position: relative;
+  }
+  
+  /* Banner Content */
+  .banner-content {
+    max-width: 800px;
+    padding: 20px;
+    position: relative;
+    z-index: 2;
+  }
+  
+  /* Banner Heading */
+  .banner-heading {
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+  }
+  
+  /* Banner Description */
+  .banner-description {
+    font-size: 18px;
+    margin-bottom: 30px;
+    line-height: 1.5;
+    font-weight: lighter;
+  }
+  
+  /* Banner Button */
+  .banner-btn {
+    padding: 15px 30px;
+    font-size: 18px;
+    background-color: #D4AF37; /* Gold color */
+    color: #1A1A2E; /* Dark color for contrast */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+  }
+  
+  .banner-btn:hover {
+    background-color: #eb8b18; /* Hover effect */
+  }
+  
+  /* Optional: Add an overlay for better readability on the background image */
+  .banner-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4); /* Transparent black overlay */
+    z-index: 1; /* Make sure the overlay is behind the content */
+  }
+  
